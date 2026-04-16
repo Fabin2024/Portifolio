@@ -22,12 +22,25 @@
             --cursor-size: 20px;
             --cursor-hover-size: 80px;
         }
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        /* Ocultar barra verticais/horizontais de rolagem do navegador para visual limpo no mobile e desktop */
+        html {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        html::-webkit-scrollbar, body::-webkit-scrollbar {
+            display: none;
+        }
         body {
             font-family: 'Open Sans', 'Prompt', sans-serif;
             background-color: #050505;
             color: white;
-            overflow-x: hidden;
             cursor: none;
+            width: 100%;
+            position: relative;
         }
         h1, h2, h3, h4, h5, h6, .font-heading {
             font-family: 'Montserrat', 'Prompt', sans-serif;
@@ -212,6 +225,29 @@
         }
         .floating-avatar { animation: customFloat 6s ease-in-out infinite; }
         .floating-avatar-delayed { animation: customFloat 6s ease-in-out infinite; animation-delay: -3s; }
+
+        /* Mobile Performance & Fluidity */
+        @media (max-width: 768px) {
+            .noise-overlay {
+                display: none !important;
+            }
+            .floating-avatar,
+            .floating-avatar-delayed,
+            .swinging-wrapper {
+                animation: none !important;
+            }
+            /* Desabilita animações contínuas inline pesadas mas preserva transforms para layout */
+            div[style*="animation: float"], 
+            div[style*="animation: opacityPulse"], 
+            div[style*="animation: dataDrop"] {
+                animation: none !important;
+            }
+            /* Otimização de blur em vidros (MUITO pesado e lento em celulares) */
+            .glass-panel, .widget-glass {
+                backdrop-filter: blur(8px) saturate(120%) !important;
+                -webkit-backdrop-filter: blur(8px) saturate(120%) !important;
+            }
+        }
     </style>
 </head>
 <body class="selection:bg-white/30 selection:text-white">
@@ -222,7 +258,7 @@
     <div class="noise-overlay"></div>
 
     <!-- Animated Ambient Liquidos -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+    <div class="hidden md:block fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
         <div class="liquid-blob bg-white" style="width: 600px; height: 600px; top: -100px; left: -100px; opacity: 0.04; animation-duration: 15s;"></div>
         <div class="liquid-blob bg-gray-400" style="width: 500px; height: 500px; top: 50%; right: -150px; opacity: 0.03; animation-duration: 22s; animation-delay: -5s;"></div>
         <div class="liquid-blob bg-gray-600" style="width: 700px; height: 700px; bottom: -200px; left: 10%; opacity: 0.03; animation-duration: 25s; animation-delay: -10s;"></div>
@@ -328,7 +364,7 @@
             <div class="absolute inset-x-0 top-0 z-10 overflow-visible pointer-events-none flex justify-center" style="height: 100vh;">
                 <div class="swinging-wrapper">
                     <!-- UnicornStudio Effect (Feixes de Luz) -->
-                    <div class="unicorn-rays-container">
+                    <div class="hidden md:block unicorn-rays-container">
                         <div class="absolute w-full h-full left-0 top-0 pointer-events-none" data-us-project="uFY4IYPs2LU8fWm96Im2"></div>
                         <script type="text/javascript">
                             if (window.innerWidth >= 768) {
@@ -349,8 +385,8 @@
             </div>
             
             <!-- Elementos de Iluminação Ambiente (Blobs) -->
-            <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-white/5 rounded-full blur-[140px] mix-blend-screen" style="animation: float 20s infinite alternate ease-in-out;"></div>
-            <div class="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-gray-500/5 rounded-full blur-[120px] mix-blend-screen" style="animation: float 25s infinite alternate-reverse ease-in-out;"></div>
+            <div class="hidden md:block absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-white/5 rounded-full blur-[140px] mix-blend-screen" style="animation: float 20s infinite alternate ease-in-out;"></div>
+            <div class="hidden md:block absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-gray-500/5 rounded-full blur-[120px] mix-blend-screen" style="animation: float 25s infinite alternate-reverse ease-in-out;"></div>
             
             <!-- Grid Animado Sofisticado -->
             <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:48px_48px] opacity-30 z-0" style="mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 10%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 10%, transparent 100%); animation: opacityPulse 8s ease-in-out infinite alternate;"></div>
