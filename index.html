@@ -1179,24 +1179,36 @@
                 });
             }
 
-            // Ativa os widgets ao segurar o dedo na tela
+            // Mobile Click to Expand Logic (Widgets)
             const touchFrames = document.querySelectorAll('.avatar-frame');
-            touchFrames.forEach(frame => {
-                const handleTouchStart = (e) => {
-                    const widget = frame.querySelector('.widget-glass');
-                    if(widget) widget.classList.add('touch-expanded');
-                };
-                
-                const handleTouchEnd = (e) => {
-                    const widget = frame.querySelector('.widget-glass');
-                    if(widget) widget.classList.remove('touch-expanded');
-                };
+            
+            // Fechar ao clicar fora
+            document.addEventListener('click', (e) => {
+                const clickedInFrame = e.target.closest('.avatar-frame');
+                if (!clickedInFrame && isTouchDevice) {
+                    touchFrames.forEach(f => {
+                        const widget = f.querySelector('.widget-glass');
+                        if (widget) widget.classList.remove('touch-expanded');
+                    });
+                }
+            });
 
-                frame.addEventListener('touchstart', handleTouchStart, {passive: true});
-                frame.addEventListener('touchend', handleTouchEnd);
-                frame.addEventListener('touchcancel', handleTouchEnd);
-                // Evita que o click simples deixe o widget aberto
-                frame.addEventListener('click', handleTouchEnd);
+            touchFrames.forEach(frame => {
+                frame.addEventListener('click', (e) => {
+                    if (!isTouchDevice) return; // Desktop usa :hover no CSS
+                    
+                    const widget = frame.querySelector('.widget-glass');
+                    
+                    // Fechar se já estiver aberto (e fechar os outros)
+                    touchFrames.forEach(f => {
+                        if (f !== frame) {
+                            const otherWidget = f.querySelector('.widget-glass');
+                            if (otherWidget) otherWidget.classList.remove('touch-expanded');
+                        }
+                    });
+
+                    if (widget) widget.classList.toggle('touch-expanded');
+                });
             });
 
             // 3. Simple Parallax Effects
