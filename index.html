@@ -588,8 +588,8 @@
             </style>
 
             <!-- Moving abstract blobs (efeito placeholder "foto de fundo") -->
-            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[140px] mix-blend-screen" style="animation: float 30s infinite alternate ease-in-out;"></div>
-            <div class="absolute -bottom-40 -left-20 w-[600px] h-[600px] bg-gray-500/10 rounded-full blur-[120px] mix-blend-screen" style="animation: float 25s infinite alternate-reverse ease-in-out;"></div>
+            <div class="hidden md:block absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[140px] mix-blend-screen" style="animation: float 30s infinite alternate ease-in-out;"></div>
+            <div class="hidden md:block absolute -bottom-40 -left-20 w-[600px] h-[600px] bg-gray-500/10 rounded-full blur-[120px] mix-blend-screen" style="animation: float 25s infinite alternate-reverse ease-in-out;"></div>
             <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_#050505_100%)]"></div>
         </div>
 
@@ -648,8 +648,8 @@
         <!-- Fundo sutil com Noise/Grid para consistência -->
         <div class="absolute inset-0 bg-[#010101] z-0 pointer-events-none">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] mix-blend-screen opacity-20" style="mask-image: linear-gradient(to bottom, black, transparent);"></div>
-            <div class="absolute top-[20%] left-[20%] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen"></div>
-            <div class="absolute bottom-[20%] right-[20%] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen"></div>
+            <div class="hidden md:block absolute top-[20%] left-[20%] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen"></div>
+            <div class="hidden md:block absolute bottom-[20%] right-[20%] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen"></div>
         </div>
 
         <!-- Header Unificado / Flutuante Superior -->
@@ -904,7 +904,7 @@
         <!-- Background Animado / Efeito Grid -->
         <div class="absolute inset-0 bg-[#050505] z-0 pointer-events-none">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] mix-blend-screen opacity-30" style="mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 10%, transparent 100%);"></div>
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] mix-blend-screen" style="animation: float 20s infinite alternate ease-in-out;"></div>
+            <div class="hidden md:block absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] mix-blend-screen" style="animation: float 20s infinite alternate ease-in-out;"></div>
         </div>
 
         <!-- Section Header -->
@@ -1021,8 +1021,8 @@
         <div class="absolute inset-0 bg-[#010101] z-0 pointer-events-none">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:48px_48px] mix-blend-screen opacity-20" style="mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 10%, transparent 100%);"></div>
             <!-- Blobs -->
-            <div class="absolute top-1/4 left-[-100px] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen pointer-events-none"></div>
-            <div class="absolute bottom-1/4 right-[-100px] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen pointer-events-none"></div>
+            <div class="hidden md:block absolute top-1/4 left-[-100px] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen pointer-events-none"></div>
+            <div class="hidden md:block absolute bottom-1/4 right-[-100px] w-[500px] h-[500px] bg-white/5 rounded-full blur-[140px] mix-blend-screen pointer-events-none"></div>
         </div>
 
         <!-- Section Header -->
@@ -1202,6 +1202,9 @@
             const parallaxCards = document.querySelectorAll('.parallax-card');
 
             window.addEventListener('scroll', () => {
+                // Desativa cálculos pesados de parallax no scroll de celulares para prevenir travamentos (lags)
+                if(window.innerWidth < 768 || isTouchDevice) return;
+
                 let scrollY = window.scrollY;
                 
                 // Background Parallax
