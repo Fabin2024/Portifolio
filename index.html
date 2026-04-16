@@ -238,7 +238,7 @@
                 <!-- Logo -->
                 <a class="cursor-hover group-logo flex items-center gap-3" href="#hero">
                     <div class="h-10 w-10 md:h-12 md:w-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-transform duration-500 hover:scale-[1.05] flex-shrink-0">
-                        <img src="images/Synergia_Logo-removebg-preview.png" alt="Synergia Logo" class="w-full h-full object-contain" />
+                        <img loading="lazy" decoding="async" src="images/Synergia_Logo-removebg-preview.png" alt="Synergia Logo" class="w-full h-full object-contain" / loading="lazy" decoding="async">
                     </div>
                     <span class="font-heading font-bold text-lg md:text-xl text-white tracking-wide">Synergia.Hub</span>
                 </a>
@@ -331,7 +331,9 @@
                     <div class="unicorn-rays-container">
                         <div class="absolute w-full h-full left-0 top-0 pointer-events-none" data-us-project="uFY4IYPs2LU8fWm96Im2"></div>
                         <script type="text/javascript">
-                            !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+                            if (window.innerWidth >= 768) {
+                                !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+                            }
                         </script>
                     </div>
                     
@@ -357,7 +359,7 @@
             <div class="hero-beam-effect"></div>
 
             <!-- Imagem de Fundo Parallax -->
-            <img alt="Hero Parallax Background" class="parallax-bg absolute top-0 w-full h-[130%] object-cover opacity-[0.10] filter grayscale contrast-125 mix-blend-screen z-2" src="assets/photo-1451187580459-43490279c0_db6c9a5bcb5e.avif"/>
+            <img loading="lazy" decoding="async" alt="Hero Parallax Background" class="parallax-bg absolute top-0 w-full h-[130%] object-cover opacity-[0.10] filter grayscale contrast-125 mix-blend-screen z-2" src="assets/photo-1451187580459-43490279c0_db6c9a5bcb5e.avif"/ loading="lazy" decoding="async">
 
             <!-- Overlays de Gradiente Finais para Fundir o Preto -->
             <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent z-10 pointer-events-none"></div>
@@ -432,7 +434,7 @@
                         <div class="flashlight"></div>
 
                         <div class="avatar-placeholder absolute inset-0 text-white/20 transition-all duration-700 group-hover:brightness-50 group-hover:scale-105">
-                            <img src="images/estrategista.jpg" alt="Foto João Vitor" class="w-full h-full object-cover absolute" />
+                            <img loading="lazy" decoding="async" src="images/estrategista.jpg" alt="Foto João Vitor" class="w-full h-full object-cover absolute" / loading="lazy" decoding="async">
                         </div>
                         
                         <!-- Overlay Informativo (Some no hover) -->
@@ -501,7 +503,7 @@
                         <div class="flashlight"></div>
 
                         <div class="avatar-placeholder absolute inset-0 text-white/20 transition-all duration-700 group-hover:brightness-50 group-hover:scale-105">
-                            <img src="images/engenheiro_v2.jpg" alt="Foto Fábio Cavalcante" class="w-full h-full object-cover absolute" />
+                            <img loading="lazy" decoding="async" src="images/engenheiro_v2.jpg" alt="Foto Fábio Cavalcante" class="w-full h-full object-cover absolute" / loading="lazy" decoding="async">
                         </div>
 
                         <!-- Overlay Informativo (Some no hover) -->
@@ -682,12 +684,12 @@
                                 <div class="flashlight"></div>
                                 <div class="relative w-full rounded-[1.25rem] overflow-hidden aspect-[9/16] shadow-2xl transition-all duration-[800ms] group-hover:scale-[1.03]">
                                     <!-- Animação do 'beam' border gradient invisível até o hover -->
-                                    <span class="absolute inset-[-100%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.12] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                    <span class="hidden md:block absolute inset-[-100%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.12] transition-opacity duration-700 z-10 mix-blend-screen"></span>
                                     
                                     <!-- Borda interina para blend -->
                                     <div class="absolute inset-0 rounded-[1.25rem] border border-white/10 z-20 pointer-events-none group-hover:border-white/30 transition-colors duration-700"></div>
 
-                                    <img src="images/666947464_776200565369383_1127744762543907145_n.jpg" alt="Projeto Estratégia 1" class="w-full h-full object-cover transition-all duration-700 relative z-0" />
+                                    <img loading="lazy" decoding="async" src="images/666947464_776200565369383_1127744762543907145_n.jpg" alt="Projeto Estratégia 1" class="w-full h-full object-cover transition-all duration-700 relative z-0" / loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
@@ -699,11 +701,11 @@
                             <div class="glass-panel p-4 rounded-3xl cursor-hover group" style="animation: float 7s ease-in-out infinite alternate-reverse;">
                                 <div class="flashlight"></div>
                                 <div class="relative w-full rounded-[1.25rem] overflow-hidden aspect-[9/16] shadow-2xl transition-all duration-[800ms] group-hover:scale-[1.03]">
-                                    <span class="absolute inset-[-100%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.12] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                    <span class="hidden md:block absolute inset-[-100%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.12] transition-opacity duration-700 z-10 mix-blend-screen"></span>
                                     
                                     <div class="absolute inset-0 rounded-[1.25rem] border border-white/10 z-20 pointer-events-none group-hover:border-white/30 transition-colors duration-700"></div>
 
-                                    <img src="images/669004176_812003331469248_3620234893064944024_n.jpg" alt="Projeto Estratégia 2" class="w-full h-full object-cover transition-all duration-700 relative z-0" />
+                                    <img loading="lazy" decoding="async" src="images/669004176_812003331469248_3620234893064944024_n.jpg" alt="Projeto Estratégia 2" class="w-full h-full object-cover transition-all duration-700 relative z-0" / loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
@@ -725,8 +727,8 @@
                             <div style="animation: float 5s ease-in-out infinite alternate;">
                                 <div class="w-[120px] md:w-[170px] aspect-[4/5] glass-panel p-2 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-hover">
                                     <div class="relative w-full h-full rounded-xl overflow-hidden border border-white/10 group-hover/card:border-white/40 transition-colors">
-                                         <span class="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
-                                         <img src="images/Imagem%20cachorro.jpg" alt="Design Fotografia Cachorro 1" class="w-full h-full object-cover relative z-0" />
+                                         <span class="hidden md:block absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                         <img loading="lazy" decoding="async" src="images/Imagem%20cachorro.jpg" alt="Design Fotografia Cachorro 1" class="w-full h-full object-cover relative z-0" / loading="lazy" decoding="async">
                                     </div>
                                 </div>
                             </div>
@@ -737,8 +739,8 @@
                             <div style="animation: float 6s ease-in-out infinite alternate-reverse; animation-delay: 1s;">
                                 <div class="w-[130px] md:w-[190px] aspect-[4/5] glass-panel p-2.5 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.6)] cursor-hover">
                                     <div class="relative w-full h-full rounded-[1.25rem] overflow-hidden border border-white/20 group-hover/card:border-white/60 transition-colors">
-                                         <span class="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.25] transition-opacity duration-700 z-10 mix-blend-screen"></span>
-                                         <img src="images/imagem_cachorro2_dog.jpg" alt="Design Fotografia Cachorro 2" class="w-full h-full object-cover relative z-0" />
+                                         <span class="hidden md:block absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.25] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                         <img loading="lazy" decoding="async" src="images/imagem_cachorro2_dog.jpg" alt="Design Fotografia Cachorro 2" class="w-full h-full object-cover relative z-0" / loading="lazy" decoding="async">
                                     </div>
                                 </div>
                             </div>
@@ -749,8 +751,8 @@
                             <div style="animation: float 7s ease-in-out infinite alternate; animation-delay: 0.5s;">
                                 <div class="w-[120px] md:w-[170px] aspect-[4/5] glass-panel p-2 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-hover">
                                     <div class="relative w-full h-full rounded-xl overflow-hidden border border-white/10 group-hover/card:border-white/40 transition-colors">
-                                         <span class="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
-                                         <img src="images/imagem%20cachorro3.jpg" alt="Design Fotografia Cachorro 3" class="w-full h-full object-cover relative z-0" />
+                                         <span class="hidden md:block absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                         <img loading="lazy" decoding="async" src="images/imagem%20cachorro3.jpg" alt="Design Fotografia Cachorro 3" class="w-full h-full object-cover relative z-0" / loading="lazy" decoding="async">
                                     </div>
                                 </div>
                             </div>
@@ -779,7 +781,7 @@
                 <!-- Cápsula Central / Ponto de Convergência -->
                 <div class="glass-panel w-12 h-32 rounded-full border border-white/10 relative overflow-hidden flex flex-col items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.03)] group cursor-hover">
                     <!-- Border Beam giratório importado do Design System -->
-                    <span class="absolute inset-[-150%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_70%,#ffffff_100%)] opacity-30 mix-blend-screen"></span>
+                    <span class="hidden md:block absolute inset-[-150%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_70%,#ffffff_100%)] opacity-30 mix-blend-screen"></span>
                     
                     <!-- Fundo interno -->
                     <div class="absolute inset-[1px] bg-[#050505]/80 backdrop-blur-md rounded-full z-10 border border-white/5"></div>
@@ -822,8 +824,8 @@
                                 <div style="animation: float 5s ease-in-out infinite alternate;">
                                     <div class="w-[120px] md:w-[170px] aspect-[4/5] glass-panel p-2 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-hover">
                                         <div class="relative w-full h-full rounded-xl overflow-hidden border border-white/10 group-hover/card:border-white/40 transition-colors">
-                                             <span class="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
-                                             <img src="images/32-amendoim.jpg" alt="Design Amendoim" class="w-full h-full object-cover relative z-0" />
+                                             <span class="hidden md:block absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                             <img loading="lazy" decoding="async" src="images/32-amendoim.jpg" alt="Design Amendoim" class="w-full h-full object-cover relative z-0" / loading="lazy" decoding="async">
                                         </div>
                                     </div>
                                 </div>
@@ -834,8 +836,8 @@
                                 <div style="animation: float 6s ease-in-out infinite alternate-reverse; animation-delay: 1s;">
                                     <div class="w-[130px] md:w-[190px] aspect-[4/5] glass-panel p-2.5 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.6)] cursor-hover">
                                         <div class="relative w-full h-full rounded-[1.25rem] overflow-hidden border border-white/20 group-hover/card:border-white/60 transition-colors">
-                                             <span class="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.25] transition-opacity duration-700 z-10 mix-blend-screen"></span>
-                                             <img src="images/27-whey.jpg" alt="Design Whey" class="w-full h-full object-cover relative z-0" />
+                                             <span class="hidden md:block absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.25] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                             <img loading="lazy" decoding="async" src="images/27-whey.jpg" alt="Design Whey" class="w-full h-full object-cover relative z-0" / loading="lazy" decoding="async">
                                         </div>
                                     </div>
                                 </div>
@@ -846,8 +848,8 @@
                                 <div style="animation: float 7s ease-in-out infinite alternate; animation-delay: 0.5s;">
                                     <div class="w-[120px] md:w-[170px] aspect-[4/5] glass-panel p-2 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-hover">
                                         <div class="relative w-full h-full rounded-xl overflow-hidden border border-white/10 group-hover/card:border-white/40 transition-colors">
-                                             <span class="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
-                                             <img src="images/Bolo.jpg" alt="Design Bolo" class="w-full h-full object-cover relative z-0" />
+                                             <span class="hidden md:block absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover/card:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen"></span>
+                                             <img loading="lazy" decoding="async" src="images/Bolo.jpg" alt="Design Bolo" class="w-full h-full object-cover relative z-0" / loading="lazy" decoding="async">
                                         </div>
                                     </div>
                                 </div>
@@ -870,9 +872,9 @@
                                 <div class="w-full glass-panel p-2 rounded-3xl relative flex flex-col items-center justify-center border border-white/10 transition-all duration-500 shadow-[0_15px_40px_rgba(0,0,0,0.5)] cursor-hover group" style="animation: float 6s ease-in-out infinite alternate;">
                                     <div class="relative w-full rounded-[1.25rem] overflow-hidden aspect-[16/9] transition-all duration-[800ms] group-hover:scale-[1.03] group-hover:-translate-y-1">
                                         <!-- Efeito de Varredura/Luz -->
-                                        <span class="absolute inset-[-100%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen pointer-events-none"></span>
+                                        <span class="hidden md:block absolute inset-[-100%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen pointer-events-none"></span>
                                         <div class="absolute inset-0 rounded-[1.25rem] border border-white/10 z-20 pointer-events-none group-hover:border-white/30 transition-colors duration-700"></div>
-                                        <img src="images/portifolio.PNG" alt="Projeto Portfólio" class="w-full h-full object-cover object-top transition-transform duration-[1.5s] group-hover:scale-[1.08] relative z-0" />
+                                        <img loading="lazy" decoding="async" src="images/portifolio.PNG" alt="Projeto Portfólio" class="w-full h-full object-cover object-top transition-transform duration-[1.5s] group-hover:scale-[1.08] relative z-0" / loading="lazy" decoding="async">
                                     </div>
                                 </div>
                             </div>
@@ -882,9 +884,9 @@
                                 <div class="w-full glass-panel p-2 rounded-3xl relative flex flex-col items-center justify-center border border-white/10 transition-all duration-500 shadow-[0_15px_40px_rgba(0,0,0,0.5)] cursor-hover group" style="animation: float 7s ease-in-out infinite alternate-reverse;">
                                     <div class="relative w-full rounded-[1.25rem] overflow-hidden aspect-[16/9] transition-all duration-[800ms] group-hover:scale-[1.03] group-hover:-translate-y-1">
                                         <!-- Efeito de Varredura/Luz -->
-                                        <span class="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen pointer-events-none"></span>
+                                        <span class="hidden md:block absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-700 z-10 mix-blend-screen pointer-events-none"></span>
                                         <div class="absolute inset-0 rounded-[1.25rem] border border-white/10 z-20 pointer-events-none group-hover:border-white/30 transition-colors duration-700"></div>
-                                        <img src="images/Barbearia.PNG" alt="Projeto Barbearia" class="w-full h-full object-cover object-top transition-transform duration-[1.5s] group-hover:scale-[1.08] relative z-0" />
+                                        <img loading="lazy" decoding="async" src="images/Barbearia.PNG" alt="Projeto Barbearia" class="w-full h-full object-cover object-top transition-transform duration-[1.5s] group-hover:scale-[1.08] relative z-0" / loading="lazy" decoding="async">
                                     </div>
                                 </div>
                             </div>
@@ -940,7 +942,7 @@
                 <!-- Perfil Autoria -->
                 <div class="flex items-center gap-4 border-t border-white/10 pt-5">
                     <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-white/50 transition-colors shadow-inner flex-shrink-0">
-                        <img src="images/Empresario.png" alt="Foto do Cliente" class="w-full h-full object-cover">
+                        <img loading="lazy" decoding="async" src="images/Empresario.png" alt="Foto do Cliente" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
                     <div class="flex flex-col">
                         <span class="font-bold text-white text-sm tracking-wide">Marcelo Prado</span>
@@ -972,7 +974,7 @@
                 <!-- Perfil Autoria -->
                 <div class="flex items-center gap-4 border-t border-white/10 pt-5">
                     <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-white/50 transition-colors shadow-inner flex-shrink-0">
-                        <img src="images/Moca.png" alt="Foto do Cliente" class="w-full h-full object-cover">
+                        <img loading="lazy" decoding="async" src="images/Moca.png" alt="Foto do Cliente" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
                     <div class="flex flex-col">
                         <span class="font-bold text-white text-sm tracking-wide">Fernanda Lima</span>
@@ -1004,7 +1006,7 @@
                 <!-- Perfil Autoria -->
                 <div class="flex items-center gap-4 border-t border-white/10 pt-5">
                     <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-white/50 transition-colors shadow-inner flex-shrink-0">
-                        <img src="images/pastor.png" alt="Foto do Cliente" class="w-full h-full object-cover">
+                        <img loading="lazy" decoding="async" src="images/pastor.png" alt="Foto do Cliente" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     </div>
                     <div class="flex flex-col">
                         <span class="font-bold text-white text-sm tracking-wide">Thiago Rezende</span>
@@ -1064,7 +1066,7 @@
                 
                 <div class="relative w-20 h-20 rounded-full bg-[#050505] border border-white/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]">
                     <!-- Tech spinning border effect criativo -->
-                    <span class="absolute inset-[-4px] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-30 mix-blend-screen rounded-full" style="mask-image: radial-gradient(transparent 60%, black 65%); -webkit-mask-image: radial-gradient(transparent 60%, black 65%); pointer-events-none;"></span>
+                    <span class="hidden md:block absolute inset-[-4px] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_80%,#ffffff_100%)] opacity-30 mix-blend-screen rounded-full" style="mask-image: radial-gradient(transparent 60%, black 65%); -webkit-mask-image: radial-gradient(transparent 60%, black 65%); pointer-events-none;"></span>
                     <span class="iconify text-white/90 relative z-10" data-icon="lucide:cpu" data-width="32"></span>
                 </div>
                 
