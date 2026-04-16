@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Portifolio",
+			"path": "."
+		},
+		{
+			"name": "assets",
+			"path": "../../assets"
+		}
+	],
+	"settings": {}
+}
